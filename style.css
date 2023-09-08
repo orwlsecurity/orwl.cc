@@ -1,0 +1,98 @@
+:root {
+    --primary-color: rgb(200, 255, 255);
+	--secondary-color: rgb(230, 250, 250);
+	--tertiary-color: rgb(120, 120, 120);
+    --background-color: rgb(25, 25, 25);
+}  
+
+body {
+    padding: 0;
+    margin: 20 20 20 20;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: monospace;
+	font-size: 1.1em;
+	font-weight: 400;
+    max-width: 900px;
+}
+
+body a {
+	font-family:'Andale Mono';
+	font-size: 0.9em;
+	color: var(--secondary-color);
+    text-decoration:none;
+}
+body a:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+	font-weight: 600;
+}
+
+body a:before {
+    content: "[";
+}
+
+body a:after {
+    content: "]";
+}
+
+.secondary-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.secondary-link:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+	font-weight: 700;
+}
+
+.centered_element {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#site_header {
+	border-bottom: 1px solid var(--tertiary-color);
+}
+
+#site_content_wrapper {
+	min-height: 100%;
+}
+
+#site_content_wrapper:after {
+	content: "";
+	display: block;
+}
+
+#site_content {
+	height: 100%;
+	padding-top: 1em;
+	padding-left: 2em;
+	padding-bottom: 2em;
+}
+
+#site_border {
+	border-bottom: 1px solid var(--tertiary-color);
+}
+
+#site_footer {
+	position: relative;
+	margin-top: 100px; /* positive value of footer height */
+	height: -100px;
+	padding-top: 10px;
+	clear: both;
+}
+
+#socials,
+#badges {
+	padding-top: 20px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+		--primary-color: rgb(30, 30, 30);
+		--background-color: rgb(200, 255, 255);
+    }
+}
